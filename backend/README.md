@@ -31,7 +31,7 @@ git clone https://github.com/JALAL-00/Event-Buddy-Event-Management-System.git
 
 **Navigate to the backend project folder:**
 ```bash
-cd Event-Buddy-Event-Management-System
+cd Event-Buddy-Event-Management-System/backend
 ```
 
 **Install dependencies:**
