@@ -26,12 +26,12 @@ This is the backend for the Event Buddy application, a full-stack event booking 
 
 **Clone the repository:**
 ```bash
-git clone https://github.com/JALAL-00/Event-Buddy---Deepchain-Labs-Internship-Technical-Test.git
+git clone https://github.com/JALAL-00/Event-Buddy-Event-Management-System.git
 ```
 
 **Navigate to the backend project folder:**
 ```bash
-cd Event-Buddy---Deepchain-Labs-Internship-Technical-Test/backend
+cd Event-Buddy-Event-Management-System
 ```
 
 **Install dependencies:**
