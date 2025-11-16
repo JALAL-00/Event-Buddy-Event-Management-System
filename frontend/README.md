@@ -18,12 +18,12 @@ Follow these instructions to get the frontend development environment set up and
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/JALAL-00/Event-Buddy---Deepchain-Labs-Internship-Technical-Test.git
+    git clone https://github.com/JALAL-00/Event-Buddy-Event-Management-System.git
     ```
 
 2.  **Navigate to the frontend directory:**
     ```bash
-    cd Event-Buddy---Deepchain-Labs-Internship-Technical-Test/frontend
+    cd Event-Buddy-Event-Management-System/frontend
     ```
 
 3.  **Install dependencies:**
