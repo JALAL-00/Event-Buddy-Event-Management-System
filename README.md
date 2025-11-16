@@ -6,6 +6,59 @@ This project was built as a technical test, fulfilling all specified requirement
 
 ---
 
+# Project Sceenshoots
+
+### Landing Page
+![Image](https://github.com/user-attachments/assets/8f9526c3-649a-47c6-8fe8-8828168445ee)
+
+### User Dashboard
+![Image](https://github.com/user-attachments/assets/50c65d61-b6ee-4ab0-8c66-a6cf77bb8688)
+
+### Admin Dashboard
+![Image](https://github.com/user-attachments/assets/0b728e3d-d057-4390-badc-85afc6782929)
+
+### Event Deatils As User
+![Image](https://github.com/user-attachments/assets/7cec36c1-db0d-4a9a-a1fc-42e1fdf17082)
+
+### Event Deatils As Admin
+![Image](https://github.com/user-attachments/assets/e6540462-35c3-4ba5-8a01-d4ccb780166a)
+
+### Event Create
+![Image](https://github.com/user-attachments/assets/f903936d-ad06-4185-985a-1d499fac92f3)
+
+### Event Edit
+![Image](https://github.com/user-attachments/assets/44ed1a83-f506-46ba-8561-ffc147f44c9a)
+
+### Sign Up
+![Image](https://github.com/user-attachments/assets/c4d5c388-8c29-4b74-a99f-2901c1e24541)
+
+### Sign Up
+![Image](https://github.com/user-attachments/assets/8f5cee34-52cc-45a4-8ef7-577c29549bca)
+
+---
+
+# Key Features
+
+The application is divided into three core functional areas:
+
+### **User Functionality**
+- **Event Discovery:** Browse paginated lists of upcoming and past events.
+- **Detailed View:** See full event details, including description, date, location, and real-time remaining spots.
+- **Secure Authentication:** Seamless user registration and JWT-based login.
+- **Seat Booking:** Authenticated users can book between 1 to 4 seats for any upcoming event.
+- **Personal Dashboard:** View and manage all registered events, with the ability to cancel bookings.
+
+### **Admin Functionality**
+- **Protected Dashboard:** Role-based access ensures only administrators can access the event management panel.
+- **Full CRUD Operations:**
+  - **Create:** Add new events through a rich form with image upload capabilities.
+  - **Read:** View a comprehensive list of all events and their live registration status.
+  - **Update:** Edit any detail of an existing event.
+  - **Delete:** Remove events from the platform.
+- **System Monitoring:** At-a-glance view of event registrations to monitor performance.
+
+___
+
 # Getting Started & How to Run
 
 To run the full application locally, you will need to set up and run both the backend and the frontend. **The backend server must be running before you start the frontend.**
@@ -16,7 +69,7 @@ To run the full application locally, you will need to set up and run both the ba
 - [PostgreSQL](https://www.postgresql.org/) database server installed and running.
 - [Git](https://git-scm.com/)
 
-### 🚀 Step 1: Run the Backend Server
+### Step 1: Run the Backend Server
 
 1.  **Clone the Repository:**
     ```bash
@@ -66,7 +119,7 @@ To run the full application locally, you will need to set up and run both the ba
     ```
     The backend API will now be running at `http://localhost:3000`.
 
-### 🖥️ Step 2: Run the Frontend Application
+### Step 2: Run the Frontend Application
 
 1.  **Open a New Terminal** in the root project directory.
 
@@ -125,57 +178,6 @@ After registering, the application will automatically log you in and redirect yo
 **1. Enter the following details:**
 - **Email:** `jalaluddin0046@gmail.com`
 - **Password:** `ValidPassword123@`
-
-# Project Sceenshoots
-
-### Landing Page
-![Image](https://github.com/user-attachments/assets/8f9526c3-649a-47c6-8fe8-8828168445ee)
-
-### User Dashboard
-![Image](https://github.com/user-attachments/assets/50c65d61-b6ee-4ab0-8c66-a6cf77bb8688)
-
-### Admin Dashboard
-![Image](https://github.com/user-attachments/assets/0b728e3d-d057-4390-badc-85afc6782929)
-
-### Event Deatils As User
-![Image](https://github.com/user-attachments/assets/7cec36c1-db0d-4a9a-a1fc-42e1fdf17082)
-
-### Event Deatils As Admin
-![Image](https://github.com/user-attachments/assets/e6540462-35c3-4ba5-8a01-d4ccb780166a)
-
-### Event Create
-![Image](https://github.com/user-attachments/assets/f903936d-ad06-4185-985a-1d499fac92f3)
-
-### Event Edit
-![Image](https://github.com/user-attachments/assets/44ed1a83-f506-46ba-8561-ffc147f44c9a)
-
-### Sign Up
-![Image](https://github.com/user-attachments/assets/c4d5c388-8c29-4b74-a99f-2901c1e24541)
-
-### Sign Up
-![Image](https://github.com/user-attachments/assets/8f5cee34-52cc-45a4-8ef7-577c29549bca)
-
----
-
-# Key Features
-
-The application is divided into three core functional areas:
-
-### 👤 **User Functionality**
-- **Event Discovery:** Browse paginated lists of upcoming and past events.
-- **Detailed View:** See full event details, including description, date, location, and real-time remaining spots.
-- **Secure Authentication:** Seamless user registration and JWT-based login.
-- **Seat Booking:** Authenticated users can book between 1 to 4 seats for any upcoming event.
-- **Personal Dashboard:** View and manage all registered events, with the ability to cancel bookings.
-
-### ⚙️ **Admin Functionality**
-- **Protected Dashboard:** Role-based access ensures only administrators can access the event management panel.
-- **Full CRUD Operations:**
-  - **Create:** Add new events through a rich form with image upload capabilities.
-  - **Read:** View a comprehensive list of all events and their live registration status.
-  - **Update:** Edit any detail of an existing event.
-  - **Delete:** Remove events from the platform.
-- **System Monitoring:** At-a-glance view of event registrations to monitor performance.
 
 ---
 
