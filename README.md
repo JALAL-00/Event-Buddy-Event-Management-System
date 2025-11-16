@@ -20,8 +20,8 @@ To run the full application locally, you will need to set up and run both the ba
 
 1.  **Clone the Repository:**
     ```bash
-    git clone https://github.com/JALAL-00/Event-Buddy---Deepchain-Labs-Internship-Technical-Test.git
-    cd Event-Buddy---Deepchain-Labs-Internship-Technical-Test
+    git clone https://github.com/JALAL-00/Event-Buddy-Event-Management-System.git
+    cd Event-Buddy-Event-Management-System
     ```
 
 2.  **Navigate to the Backend Directory:**
