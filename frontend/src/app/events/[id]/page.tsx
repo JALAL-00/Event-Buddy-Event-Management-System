@@ -2,7 +2,7 @@
 
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -162,7 +162,7 @@ export default function EventDetailPage() {
           <div className="mt-12">
             <h2 className="text-2xl font-bold text-dark-gray">About this event</h2>
             <div className="mt-4 prose-sm sm:prose-base text-medium-gray max-w-none">
-                {event.description.split('\n').filter(p => p).map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+                {event.description.split('\n').map((paragraph, index) => <p key={index}>{paragraph}</p>)}
             </div>
           </div>
           
