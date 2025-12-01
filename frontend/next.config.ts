@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'event-buddy-event-management-system-production.up.railway.app',
+        hostname: '*.up.railway.app',
         port: '',
         pathname: '/uploads/**',
       },
