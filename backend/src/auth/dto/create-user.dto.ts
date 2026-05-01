@@ -5,12 +5,21 @@ import {
   MinLength,
   Matches,
 } from 'class-validator';
+import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateUserDto {
+  @ApiProperty({
+    example: 'Jalal Uddin',
+    description: 'Full name of the user',
+  })
   @IsString()
   @IsNotEmpty()
   fullName: string;
 
+  @ApiProperty({
+    example: 'jalal@gmail.com',
+    description: 'Email address (must be @gmail.com)',
+  })
   @IsEmail()
   @IsNotEmpty()
   @Matches(/^[\w-\.]+@gmail\.com$/, {
@@ -18,6 +27,10 @@ export class CreateUserDto {
   })
   email: string;
 
+  @ApiProperty({
+    example: 'Password123!',
+    description: 'Password (min 8 chars, uppercase, lowercase, number, special char)',
+  })
   @IsString()
   @IsNotEmpty()
   @MinLength(8, { message: 'Password must be at least 8 characters long.' })

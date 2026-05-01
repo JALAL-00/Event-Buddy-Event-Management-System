@@ -69,8 +69,8 @@ export class EventsService {
     const numericCapacity = parseInt(String(capacity), 10);
     if (isNaN(numericCapacity) || numericCapacity <= 0) { throw new BadRequestException("Capacity must be a valid positive number."); }
     let tagsArray: string[] = [];
-    if (tags && typeof tags === 'string' && tags.trim() !== '') {
-        tagsArray = tags.split(',').map(tag => tag.trim()).filter(Boolean);
+    if (tags && typeof tags === 'string' && (tags as string).trim() !== '') {
+        tagsArray = (tags as string).split(',').map(tag => tag.trim()).filter(Boolean);
     } else if (Array.isArray(tags)) { tagsArray = tags; }
     const eventDate = this.combineDateAndTime(date, time);
     const newEvent = this.eventRepository.create({ ...restDto, imageUrl, date: eventDate, capacity: numericCapacity, tags: tagsArray });
@@ -81,7 +81,7 @@ export class EventsService {
     const event = await this.eventRepository.findOneBy({ id });
     if (!event) throw new NotFoundException(`Event with ID "${id}" not found`);
     if (updateEventDto.tags && typeof updateEventDto.tags === 'string') {
-        (updateEventDto.tags as any) = updateEventDto.tags.split(',').map(tag => tag.trim()).filter(Boolean);
+        (updateEventDto.tags as any) = (updateEventDto.tags as string).split(',').map(tag => tag.trim()).filter(Boolean);
     }
     const dtoWithConvertedTypes = { ...updateEventDto, capacity: updateEventDto.capacity ? parseInt(String(updateEventDto.capacity), 10) : event.capacity, };
     Object.assign(event, dtoWithConvertedTypes);

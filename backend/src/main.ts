@@ -4,6 +4,7 @@ import { ValidationPipe, ClassSerializerInterceptor } from '@nestjs/common';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { join } from 'path';
 import { AccessTokenGuard } from './common/guards/accessToken.guard';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
@@ -29,8 +30,34 @@ async function bootstrap() {
     credentials: true,
   });
 
-  await app.listen(process.env.PORT || 3000);
+  // Swagger Configuration
+  const config = new DocumentBuilder()
+    .setTitle('Event Buddy API')
+    .setDescription('Event Management System API - Complete documentation for Event Buddy backend')
+    .setVersion('1.0')
+    .addTag('Auth', 'Authentication endpoints')
+    .addTag('Events', 'Event management endpoints')
+    .addTag('Bookings', 'Event booking endpoints')
+    .addTag('Mail', 'Email notification endpoints')
+    .addBearerAuth(
+      {
+        type: 'http',
+        scheme: 'bearer',
+        bearerFormat: 'JWT',
+        name: 'JWT',
+        description: 'Enter JWT token',
+        in: 'header',
+      },
+      'JWT-auth', // This name will be used in @ApiBearerAuth()
+    )
+    .build();
+
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('api', app, document);
+
+  await app.listen(process.env.PORT || 5007);
   console.log(`Backend is running on: ${await app.getUrl()}`);
+  console.log(`Swagger documentation: ${await app.getUrl()}/api`);
 }
 
 bootstrap();

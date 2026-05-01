@@ -67,10 +67,10 @@ export default function LoginPage() {
           {/* Password Input */}
           <div>
             <label htmlFor="password" className="form-label">Password</label>
-            <input 
-              id="password" 
-              name="password" 
-              type="password" 
+            <input
+              id="password"
+              name="password"
+              type="password"
               autoComplete="current-password"
               required
               placeholder="enter your password"
@@ -79,6 +79,11 @@ export default function LoginPage() {
               onChange={(e) => setPassword(e.target.value)}
               disabled={isLoading}
             />
+            <div className="mt-2 text-right">
+              <Link href="/forgot-password" className="text-sm text-primary-blue hover:underline">
+                Forgot password?
+              </Link>
+            </div>
           </div>
 
           {/* Error Message Display */}

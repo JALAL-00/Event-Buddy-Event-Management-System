@@ -7,6 +7,7 @@ import { AuthModule } from './auth/auth.module';
 import { SeedModule } from './seed/seed.module';
 import { EventsModule } from './events/events.module';
 import { BookingsModule } from './bookings/bookings.module';
+import { MailModule } from './mail/mail.module';
 
 @Module({
   imports: [
@@ -46,6 +47,7 @@ import { BookingsModule } from './bookings/bookings.module';
     SeedModule,
     EventsModule,
     BookingsModule,
+    MailModule,
 
   ],
   controllers: [AppController],

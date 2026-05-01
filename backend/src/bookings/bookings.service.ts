@@ -5,6 +5,7 @@ import { Event } from '../events/entities/event.entity';
 import { Booking } from './entities/booking.entity';
 import { CreateBookingDto } from './dto/create-booking.dto';
 import { User } from 'src/auth/entities/user.entity';
+import { MailService } from 'src/mail/mail.service';
 
 @Injectable()
 export class BookingsService {
@@ -13,6 +14,7 @@ export class BookingsService {
     private readonly bookingRepository: Repository<Booking>,
     @InjectRepository(Event)
     private readonly eventRepository: Repository<Event>,
+    private readonly mailService: MailService,
   ) {}
 
   async create(createBookingDto: CreateBookingDto, currentUser: User): Promise<Booking> {
@@ -37,7 +39,19 @@ export class BookingsService {
       numberOfSeats,
     });
 
-    return this.bookingRepository.save(newBooking);
+    const savedBooking = await this.bookingRepository.save(newBooking);
+
+    // Send booking confirmation email
+    await this.mailService.sendBookingConfirmation(
+      currentUser.email,
+      currentUser.fullName,
+      event.title,
+      event.date,
+      event.location,
+      numberOfSeats,
+    );
+
+    return savedBooking;
   }
 
   async findMyBookings(currentUser: User): Promise<Booking[]> {

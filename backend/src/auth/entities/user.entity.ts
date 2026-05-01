@@ -30,6 +30,12 @@ export class User {
   })
   role: UserRole;
 
+  @Column({ type: 'varchar', nullable: true })
+  resetCode: string | null;
+
+  @Column({ type: 'timestamptz', nullable: true })
+  resetCodeExpires: Date | null;
+
   @CreateDateColumn()
   createdAt: Date;
 
